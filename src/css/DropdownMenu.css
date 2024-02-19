@@ -1,0 +1,36 @@
+.dropdown-toggle {
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    margin: 10px 0
+}
+
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0
+}
+
+
+.dropdown {
+    margin: 10px 0;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    width: 150px;
+    margin: 15px 0
+}
+
+.dropdown-menu-option{
+    color: grey;
+    font-size: 12px;
+    margin-left: 5px
+}
+
+
+.dropdown-menu label {
+    display: flex;
+    align-items: center;
+    margin: 5px 0
+}
+

@@ -1,0 +1,53 @@
+.ShopNewArrivals h1 {
+    color: #1C1C1C;
+    font-size: 20px;
+}
+
+.ShopNewArrivals {
+    
+    display: flex;
+}
+
+.ShopNewArrivalsMain {
+    margin: 50px 0 0 60px;
+}
+
+.shop-new-arrivals-banner-img {
+    width: 300px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.shop-new-arrivals-banner-p {
+    line-height: 0.7em;
+    margin: 5px 0 0 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.shop-new-arrivals-banner-low {
+    display: flex;
+    margin: 60px 0;
+}
+
+.shop-new-arrivals-banner-low img {
+    width: 45vw;
+    margin: 0 10px 0 0;
+    cursor: pointer
+}
+
+
+.shop-new-arrivals-banner-low p {
+    color: #1C1C1C;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
+.shop-new-arrivals-banner-low button {
+    background-color: #181818;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}

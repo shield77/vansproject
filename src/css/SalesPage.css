@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.sales-banner .banner{
+    width: 100%;
+    height: 38vh
+}
+
+.sales-banner p {
+    font-size: 10px;
+    line-height: 1.3em;
+    color: grey;
+    margin: 10px 0;
+}
+
+.sales-banner {
+    margin: 0 60px;
+}
+
+.sales-main {
+    display: flex;
+}
+
+.sales-page-bottom {
+    margin: 100px 60px 0 20px;
+}
+
+.sales-page-bottom:first-child {
+    line-height: 1.6em;
+    font-size: 14px;
+    margin-left: 40px;
+
+}
+
+.sorting {
+    position: absolute;
+    right: 80px;
+    top: 75px;
+    font-size: 12px;
+}
+
+.sorting button {
+    color: black;
+    text-decoration:underline;
+    background-color: white;
+    border: none;
+}
+
+.sorting select {
+    background-color: white;
+    border: none;
+    outline: none;
+    margin-left: 5px
+}
+
+
+.fullscreen {
+    width: 100vw
+}
+
+
+.filters-info {
+    width: 150px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 10px;
+    top: 40px
+}
+
+.filters-info p {
+    color: grey;
+    font-size: 12px;
+    margin: 10px 0
+}
+
+.filters-info h1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+.filters-info button {
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+    margin-left: 20px;
+    margin-bottom: 15px;
+
+}
