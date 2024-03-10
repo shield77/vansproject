@@ -49,10 +49,8 @@ li.li-important{
     background-color: rgb(235, 234, 234);
 }
 
-.lower-footer div h1{
-    font-size: 17px;
-}
-.lower-footer div h1 {
+
+.follow-vans h1, .store-locator h1, .subscribe-to-news h1 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -153,4 +151,84 @@ button.store-locator-button {
 
 p.terms {
     font-size: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-dropdown {
+        border-top: 0.6px solid black;
+    }
+
+    .Footer {
+        background-color: rgb(233, 233, 233);
+        width: 100vw;
+    }
+    .dropdowns {
+        background-color: rgb(233, 233, 233);
+    }
+    .footer-category {
+        font-size: 20px;
+        padding: 10px 20px
+    }
+    .footer-dropdown ul {
+        list-style: none;
+        margin-left: 20px;
+    }
+    .footer-dropdown li {
+        margin: 15px 0
+    }
+
+    .subscribe-to-news input, .subscribe-to-news form {
+        width: 100% !important
+    }
+    .subscribe-to-news {
+        width: 90% !important;
+        margin-bottom: 40px;
+    }
+
+    .subscribe-to-news p {
+        margin-bottom: 10px
+    }
+
+    .subscribe-to-news form input {
+        width: 25px !important;
+        accent-color: black;
+    }
+
+    .follow-vans {
+        margin-bottom: 160px !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .follow-vans h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .lower-footer{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+    }
+    .store-locator{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .store-locator h1 {
+        margin-bottom: 0
+    }
+    button.store-locator-button {
+        width: 90%;
+    }
+    .social img {
+        width: 20px
+    }
+
+    .lower-footer div {
+        margin-bottom: 70px;
+    }
+    
 }

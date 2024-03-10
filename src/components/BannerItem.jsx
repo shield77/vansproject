@@ -5,7 +5,7 @@ import React from "react";
 function BannerItem({ img, title }) {
     return (
       <div className="">
-        <img src={img} alt={title} className="shop-new-arrivals-banner-img" />
+        <img src={img} alt={title} className="shop-new-arrivals-banner-img2" />
         <p className="shop-new-arrivals-banner-p">{title}</p>
         <button>Shop Now</button>
       </div>

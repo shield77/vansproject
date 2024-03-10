@@ -18,7 +18,6 @@ img {
 
 .main-page-banner {
     max-width: 100%;
-    overflow: hidden;
 }
 
 .banner-image {
@@ -68,4 +67,41 @@ img {
 
 .up button{
     padding: 10px;
+}
+
+img.banner-mobile {
+    display: none;
+}
+
+@media (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .main-page {
+        overflow-x: hidden;
+    }
+    .banner-mobile {
+        display: flex !important;
+        position: relative;
+    }
+    .main-page-banner img:first-child{
+        display: none;
+    }
+
+    .main-page-info {
+        margin: 20px 20px 0 10px;
+    }
+
+    .main-page-info h1 {
+        font-size: 20px;
+    }
+
+    .main-page-info button {
+        width: 100%;
+        font-size: 16px;
+    }
+    .main-page-banner {
+        z-index: 0 !important;
+    }
 }

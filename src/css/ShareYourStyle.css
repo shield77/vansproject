@@ -15,3 +15,9 @@
     left: 50px;
     top: 118px;
 }
+
+@media (max-width: 768px) {
+    .ShareStyle, .style-carousel {
+        margin: 20px;
+    }
+}

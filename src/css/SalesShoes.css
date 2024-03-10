@@ -1,51 +1,44 @@
 .catalog-shoes {
     display: flex;
     flex-wrap: wrap;
-    margin: 95px 40px 0 0
-}
-
-div.catalog-shoes.catalog-shoes-fullscreen{
+    margin: 95px 40px 0 0;
+  }
+  
+  .catalog-shoes-fullscreen {
     margin-left: 60px;
-}
-img.shoes-img{
-    width: 23.7vw
-}
-
-img.shoes-img.shoes-img-fullscreen{
-    width: 30vw
-}
-
-.catalog-shoe {
+  }
+  
+  .catalog-shoe {
     width: 23.7vw;
     margin: 0 5px 0 0;
     margin-bottom: 30px;
-}
-
-div.catalog-shoe.catalog-shoe-fullscreen {
+  }
+  
+  .catalog-shoe-fullscreen {
     width: 30vw;
-}
-
-
-.catalog-shoe h1 {
+  }
+  
+  .catalog-shoe h1 {
     font-size: 16px;
-}
-
-.catalog-shoe p {
+  }
+  
+  .catalog-shoe p {
     font-size: 12px;
-    color: rgb(107, 21, 21)
-}
-
-.catalog-shoe h1, .catalog-shoe p, .catalog-shoe a {
-    margin: 10px 0
-}
-
-.catalog-shoe a {
+    color: rgb(107, 21, 21);
+  }
+  
+  .catalog-shoe h1,
+  .catalog-shoe p,
+  .catalog-shoe a {
+    margin: 10px 0;
+  }
+  
+  .catalog-shoe a {
     color: black;
     font-size: 12px;
-}
-
-
-.full-screen {
+  }
+  
+  .full-screen {
     width: 100%;
     height: calc(100vh - 100px);
   }
@@ -54,5 +47,33 @@ div.catalog-shoe.catalog-shoe-fullscreen {
     display: none;
   }
   
-
-
+  .catalog-shoe-sale-btn {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    font-size: 11px;
+  }
+  
+  /* Медиазапрос для мобильных устройств */
+  @media (max-width: 768px) {
+    .catalog-shoes,
+    .catalog-shoes-fullscreen {
+      margin: 95px 0 0 0; /* Изменение марджина */
+    }
+  
+    .shoes-img,
+    .shoes-img-fullscreen {
+      width: 44vw !important; /* Изменение ширины изображения */
+    }
+  
+    .catalog-shoe,
+    .catalog-shoe-fullscreen {
+      width: 23.7vw; /* Изменение ширины элемента */
+      margin: 30px 72px 0 20px; /* Изменение марджина */
+      margin-bottom: 20px; /* Изменение марджина */
+    }
+  }
+  

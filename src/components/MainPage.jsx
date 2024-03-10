@@ -7,6 +7,7 @@ import Trending from "./Trending";
 import ShareYourStyle from "./ShareYourStyle";
 import TheClassic from "./TheClassics";
 import Footer from "./Footer";
+import TrendingBanner from "./TrendingBanner";
 
 export default function MainPage() {
     const scrollToTop = () => {
@@ -21,6 +22,7 @@ export default function MainPage() {
             <Header />
             <div className="main-page-banner">
                 <img src={banner} />
+                <img src= 'https://images.vans.com/is/image/VansBrand/SP24%20OLD%20MEETS%20KNU%20SKOOL%20%2D%20MOBILE%20HERO%20430x498px?wid=430' className="banner-mobile" />
             </div>
             <div className="up">
                 <button onClick={scrollToTop}> ^ </button>
@@ -34,6 +36,7 @@ export default function MainPage() {
             
             <ShopNewArrivals />
             <Trending title="Trending" />
+            <TrendingBanner />
             <ShareYourStyle />
             <TheClassic title="The Classic" />
             <Footer />

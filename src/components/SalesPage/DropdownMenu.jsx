@@ -14,7 +14,7 @@ function DropdownMenu({ buttonText, options, onChange }) {
       ? selectedOptions.filter(item => item !== option)
       : [...selectedOptions, option];
     setSelectedOptions(updatedSelectedOptions);
-    onChange(updatedSelectedOptions); // Вызываем обратный вызов с обновленными выбранными опциями
+    onChange(updatedSelectedOptions);
   };
 
   return (

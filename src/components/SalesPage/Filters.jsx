@@ -13,8 +13,7 @@ export default function Filters({ onChange }) {
 
     return (
         <div className="Filters">
-            <DropdownMenu buttonText="Product Type" options={["Footwear", "Clothing", "Accesories"]} onChange={handleOptionChange} />
-            {/* Другие DropdownMenu здесь */}
+            <DropdownMenu buttonText="Product Type" options={["Footwear", "Clothing", "Accessories"]} onChange={handleOptionChange} />
             <DropdownMenu buttonText="Clothing Category" options={["Hoodies & Sweatshirts", "Shorts", "T-Shirts", "Tops", "Jackets", "Pants", "Sweaters"]} onChange={handleOptionChange} />
             <DropdownMenu buttonText="Accessories Category" options={["Socks", "Backpacks", "Hats", "Bags", "Shoecare"]} onChange={handleOptionChange} />
             <DropdownMenu buttonText="Mens Shoe Size" options={["40", "41", "42", "43", "44"]} onChange={handleOptionChange} />

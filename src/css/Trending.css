@@ -12,8 +12,9 @@
 
 .Trending h1 {
     color: #1C1C1C;
-    font-size: 20px;
-    margin-bottom: 20px
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .Trending {
@@ -40,4 +41,31 @@
     background-color: white;
 }
 
+
+@media (max-width: 768px) {
+    .Trending {
+        margin: 20px;
+    }
+    .trending-p-name {
+        font-size: 12px;
+        width: 180px;
+    }
+    .trending-p-price {
+        font-size: 14px;
+    }
+    .trending-img {
+        width: 170px
+    }
+
+    .trending-banner {
+        margin-right: 110px;
+    }
+
+    .prev, .next {
+        display: none;
+    }
+    .mobile-low-banner {
+        margin: 20px;
+    }
+}
 

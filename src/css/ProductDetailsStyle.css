@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.StyleDetails h1 {
+    font-size: 20px;
+}
+
+.StyleDetails {
+    margin-top: 40px;
+}
+
+.details-carousel {
+    display: flex;
+    margin: 0 20px;
+}
+.details-carousel img {
+    width: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.style-banner {
+    width: 30%;
+    margin: 2px;
+    padding: 0;
+}
+
+
+.details-prev, .details-next {
+    position: absolute;
+    background-color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    top: 75px;
+    z-index: 99999;
+}
+
+
+.details-next img{
+    width: 20px;
+    height: 20px;
+}
+.details-prev {
+    left: 0;
+}
+
+.details-next {
+    left: 100%;
+    top: 55px;
+}

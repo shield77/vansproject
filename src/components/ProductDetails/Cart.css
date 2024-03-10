@@ -1,0 +1,151 @@
+.Cart {
+    position: fixed;
+    width: 23%;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Изменено с space-between на flex-start */
+  }
+  
+  .cart-info {
+    position: relative;
+    top: 0; /* Изменено с 20px на 0 */
+  }
+  
+  .cart-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-top div {
+    display: flex;
+  }
+  
+  .Cart div div div div img {
+    width: 100px;
+  }
+  
+  .Cart div div div {
+    display: flex;
+  }
+  
+  .Cart div div div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .Cart div div div {
+    margin: 3px 10px 0 0;
+  }
+  
+  .Cart div div div button {
+    width: 50px;
+    background-color: white;
+  }
+  
+  .Cart button {
+    background-color: white;
+    border: none;
+    margin: 0 10px 0 0;
+  }
+  
+  .small-info {
+    color: grey;
+    font-size: 13px;
+  }
+  
+  .small-info-price {
+    color: darkred;
+  }
+  
+  .cart-top h1 {
+    font-size: 20px;
+  }
+  
+  .cart-top {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+  }
+  
+  .cart-mid {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .firstmid {
+    margin-bottom: 10px;
+  }
+
+  .cart-bottom div button {
+    background-color: #1C1C1C;
+    color:white;
+    width: 45%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+
+  .cart-bottom div {
+    margin-left: 20px;
+  }
+  .cart-bottom div button:nth-child(2) {
+    background-color: white;
+    
+    border: solid 1px #1C1C1C
+  }
+
+  .cart-bottom div button:nth-child(2) a {
+    color: #1C1C1C;
+    text-decoration: none;
+  }
+
+  .cart-bottom p{
+text-align: center;
+  }
+
+
+  .total-items{
+    font-size: 12px;
+  }
+  
+
+
+
+
+
+
+  .CartPage {
+    overflow: auto; /* Добавляем скроллинг для страницы */
+  }
+  
+
+  
+  .Cart {
+    position: fixed;
+    width: 23%;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto; /* Добавляем скроллинг для корзины */
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .shoe-in-cart {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+  }

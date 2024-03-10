@@ -1,0 +1,100 @@
+.upper-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.Comments {
+    margin: 60px 80px 60px 60px;
+}
+
+.upper-info-quick {
+    display: flex;
+    align-items: center;
+}
+
+.upper-info-quick div, .upper-info-quick p{
+    margin-right: 15px;
+    font-size: 13px;
+    color: black
+}
+
+.upper-info-quick p a {
+    color: black;
+}
+
+.upper-info-left h1,  .upper-info-right h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.mid-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mid-info-right {
+    margin-right: 120px;
+}
+
+.mid-info div h1 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.mid-info div p {
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.mid-info-left h1 {
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+
+.stars {
+    align-items: flex-start;
+}
+
+
+.stars p{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.comment h1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.comment {
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+.comment p{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.main-comments {
+    margin: 40px 0;
+}
+
+.comment span {
+    font-size: 10px;
+}
+
+.helpful-review-div {
+    display: flex;
+}
+
+.helpful-review-div img {
+    margin: 0 15px;
+}
+
+.helpful-review {
+    font-size: 12px;
+    margin: 15px 0;
+}

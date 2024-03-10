@@ -17,7 +17,7 @@ export default function TrendingBanner () {
 
 
     return (
-        <div className="shop-new-arrivals-banner-low">
+        <div className="shop-new-arrivals-banner-low mobile-low-banner">
         {trendingBanner.map((item, index) => (
           <BannerItem key={index} img={item.img} title={item.title} />
         ))}
