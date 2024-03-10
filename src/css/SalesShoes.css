@@ -3,19 +3,26 @@
     flex-wrap: wrap;
     margin: 95px 40px 0 0;
   }
-  
-  .catalog-shoes-fullscreen {
-    margin-left: 60px;
+
+  .catalog-shoes-fullscreen{
+    margin: 95px 60px;
   }
   
+  
   .catalog-shoe {
-    width: 23.7vw;
-    margin: 0 5px 0 0;
-    margin-bottom: 30px;
+    width: 24vw;
+    margin-right: 10px;
+  }
+  .shoes-img {
+    width: 24vw;
   }
   
   .catalog-shoe-fullscreen {
-    width: 30vw;
+    width: 29vw;
+    margin-right: 10px;
+  }
+  .shoes-img-fullscreen {
+    width: 29vw
   }
   
   .catalog-shoe h1 {
@@ -74,6 +81,15 @@
       width: 23.7vw; /* Изменение ширины элемента */
       margin: 30px 72px 0 20px; /* Изменение марджина */
       margin-bottom: 20px; /* Изменение марджина */
+    }
+    .catalog-shoe, .catalog-shoe-fullscreen {
+      z-index: 0;
+    }
+
+    .catalog-shoe h1 {
+      font-size: 16px;
+      font-weight: 500;
+      width: 44vw;
     }
   }
   

@@ -34,3 +34,29 @@
     margin: 5px 0
 }
 
+
+@media (max-width: 768px) {
+    .dropdown-toggle {
+        margin: 0;
+        font-size: 20px;
+        padding: 10px;
+        margin: 0 20px;
+        
+    }
+    .dropdown {
+        width: 100%;
+        margin: 0;
+        border-top: 1px solid lightgrey;
+        border-bottom: none;
+    }
+
+    .filters-options {
+        padding-left: 29px;
+    }
+    .filters-options p {
+        color: black;
+    }
+    .filters-options input {
+        accent-color: black;
+    }
+}

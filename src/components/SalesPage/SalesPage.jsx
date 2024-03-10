@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useMediaQuery } from 'react-responsive'; // Импортируем useMediaQuery
+import { useMediaQuery } from 'react-responsive';
 import Header from "../Header";
 import banner from "../../assets/SalesBanner.webp";
 import "../../css/SalesPage.css";
@@ -12,9 +12,8 @@ export default function SalesPage() {
     const [shoes, setShoes] = useState([]);
     const [sortBy, setSortBy] = useState("Price Low to High");
     const [selectedTypes, setSelectedTypes] = useState([]);
-    const [showFiltersMenu, setShowFiltersMenu] = useState(false); // Состояние для отслеживания открытия/закрытия меню с фильтрами
+    const [showFiltersMenu, setShowFiltersMenu] = useState(false);
 
-    // Используем useMediaQuery для определения размера экрана
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     useEffect(() => {
@@ -32,16 +31,16 @@ export default function SalesPage() {
             .catch(error => console.error("Error fetching data: ", error));
     }, [sortBy, selectedTypes]);
 
-    const toggleFiltersMenu = () => {
-        setShowFiltersMenu(!showFiltersMenu);
-    };
-
     const handleSortChange = (e) => {
         setSortBy(e.target.value);
     };
 
     const handleFilterChange = (selectedOptions) => {
         setSelectedTypes(selectedOptions);
+    };
+
+    const toggleFiltersMenu = () => {
+        setShowFiltersMenu(!showFiltersMenu);
     };
 
     return (
@@ -53,11 +52,9 @@ export default function SalesPage() {
             </div>
             <div className="sales-main">
                 <div className="sorting">
-                    {isMobile && (
                         <button className="show-filters" onClick={toggleFiltersMenu}>
                             Filters
                         </button>
-                    )}
                     <select value={sortBy} onChange={handleSortChange}>
                         <option value="Price Low to High">Price Low to High</option>
                         <option value="Price High to Low">Price High to Low</option>
@@ -68,13 +65,18 @@ export default function SalesPage() {
                     <p>{shoes.length} items</p>
                     <button className="expand-all">Expand All</button>
                 </div>
-                {/* Изменено: Добавлено условие для показа меню с фильтрами */}
-                {isMobile && showFiltersMenu && (
+                {((isMobile && showFiltersMenu) || !isMobile && showFiltersMenu) && (
                     <div className="filters-menu">
+                        <div className="filters-menu-up">
+                            <p>Filters</p>
+                            {isMobile && (
+                                <button className="close-button" onClick={toggleFiltersMenu}>X</button>
+                            )}
+                        </div>
                         <Filters onChange={handleFilterChange} />
                     </div>
                 )}
-                <SalesShoe filtersAreShown={showFiltersMenu} shoes={shoes} sortBy={sortBy} />
+               <SalesShoe filtersAreShown={showFiltersMenu} shoes={shoes} sortBy={sortBy} selectedTypes={selectedTypes} />
             </div>
             <div className="sales-page-bottom">
                 <p>May we Suggest :</p>

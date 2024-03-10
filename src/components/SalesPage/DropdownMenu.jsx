@@ -25,7 +25,7 @@ function DropdownMenu({ buttonText, options, onChange }) {
       {isOpen && (
         <div className="dropdown-menu">
           {options.map((option) => (
-            <label key={option}>
+            <label key={option} className='filters-options'>
               <input
                 type="checkbox"
                 value={option}
