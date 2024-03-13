@@ -1,7 +1,7 @@
 // Filters.js
 import React, { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
-import "../../css/Filters.css";
+import "../../css/Filters.css"
 
 export default function Filters({ onChange }) {
     const [selectedOptions, setSelectedOptions] = useState([]);

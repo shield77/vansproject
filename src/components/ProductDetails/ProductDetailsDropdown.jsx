@@ -13,9 +13,9 @@ function ProductDetailsDropdownMenu({ onChange }) {
   return (
     <div className="dropdown product-details-dropdown">
         <div className="dropdown-toggle-btn" onClick={toggleMenu}>
-            <button className="dropdown-toggle" >
-        Description
-      </button>
+            <button className="dropdown-toggle-details" >
+              Description
+            </button>
       <img src={arrowdown}></img>
         </div>
       

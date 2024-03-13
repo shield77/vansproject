@@ -37,7 +37,7 @@ export default function Cart({ onClose }) {
               <div>
                 <p className="small-info">Size : {item.size}</p>
                 <p className="small-info">Price : <span className="old-price">$70.00 </span> <span className="small-info-price"> ${item.price}</span> </p>
-                <p className="small-info">Qty : { }</p>
+                <p className="small-info">Qty : {item.quantity}</p>
               </div>
             </div>
           </div>

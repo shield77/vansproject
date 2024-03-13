@@ -13,19 +13,22 @@ import fullstar from "../../assets/stars/star-fill (1).svg";
 import halfstar from "../../assets/stars/star-half (1).svg";
 import Comments from "./Comments";
 import Cart from "./Cart";
-import Overlay from "./Overlay"; // Импортируем компонент Overlay
-import { useDispatch } from "react-redux";
-import { addToCart, updateTotalItems } from "../../Actions";
+import Overlay from "./Overlay"; 
+import { useDispatch, useSelector } from "react-redux"; 
+import { addToCart, updateTotalItems, updateCart } from "../../Actions"; 
+import { useMediaQuery } from 'react-responsive';
 
-import "./Overlay.css"; // Импортируем стили для Overlay
+import "./Overlay.css";
 
 export default function ProductDetails() {
   const [shoe, setShoe] = useState(null);
   const { id } = useParams();
   const dispatch = useDispatch();
-  const [isCartVisible, setIsCartVisible] = useState(false); // Состояние для отображения корзины
-  const [selectedSize, setSelectedSize] = useState(""); // Состояние для выбранного размера
-  const productSizesRef = useRef(null); // Ссылка на элемент с размерами
+  const [isCartVisible, setIsCartVisible] = useState(false);
+  const [selectedSize, setSelectedSize] = useState("");
+  const productSizesRef = useRef(null);
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const cartItems = useSelector(state => state.cart.cartItems);
 
   useEffect(() => {
     if (id) {
@@ -61,28 +64,43 @@ export default function ProductDetails() {
   }
 
   const handleAddToCart = () => {
-    if (selectedSize !== "") {
+  if (selectedSize !== "") {
+    const existingItemIndex = cartItems.findIndex(item => item.id === shoe.id && item.size === selectedSize);
+
+    if (existingItemIndex !== -1) {
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[existingItemIndex] = {
+        ...updatedCartItems[existingItemIndex],
+        quantity: updatedCartItems[existingItemIndex].quantity + 1
+      };
+      dispatch(updateCart(updatedCartItems));
+    } else {
       dispatch(addToCart({
+        id: shoe.id,
         title: shoe.title,
         img: shoe.img,
         size: selectedSize,
-        price: shoe.price
+        price: shoe.price,
+        quantity: 1
       }));
-      dispatch(updateTotalItems()); // Обновляем общее количество товаров
-      setIsCartVisible(true); // Показываем корзину при добавлении товара
-      document.body.style.overflow = "hidden"; // Остановка скроллинга
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Добавляем плавный эффект прокрутки
-      });
-    } else {
-      alert("Please select a size before adding to cart."); // Сообщение об ошибке
     }
-  };
+    dispatch(updateTotalItems());
+    setIsCartVisible(true);
+    document.body.style.overflow = "hidden";
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto"
+    });
+  } else {
+    alert("Please select a size before adding to cart.");
+  }
+};
+
 
   const handleCloseCart = () => {
-    setIsCartVisible(false); // Скрываем корзину при нажатии на кнопку X
-    document.body.style.overflow = ""; // Возобновление скроллинга
+    setIsCartVisible(false);
+    document.body.style.overflow = "";
   };
 
   return (
@@ -94,9 +112,9 @@ export default function ProductDetails() {
       </p>
       <div className="product-details-container">
         <div className="product-details-img">
-        <img src={shoe && shoe.img} alt={shoe && shoe.title} />
+        <img src={shoe && shoe.img} alt={shoe && shoe.title} className="product-details-pcImage"/>
 
-          <ShareYourStyleDetails />
+        {!isMobile && <ShareYourStyleDetails />}
         </div>
         <div className="product-details-info">
           <button className="product-details-sale-button">SALE</button>
@@ -113,6 +131,7 @@ export default function ProductDetails() {
             <p className="product-price">${shoe ? shoe.price : "Loading..."}</p>
 
           </div>
+          <img src={shoe && shoe.img} alt={shoe && shoe.title} className="product-details-mobileImg" />
           <div className="size-guide">
             <p className="size-text">Size</p>
             <a href="#" onClick={(e) => { e.preventDefault(); productSizesRef.current.scrollIntoView({ behavior: "smooth" }); }}>Size Guide</a>
@@ -167,7 +186,6 @@ export default function ProductDetails() {
       <Trending title="TRENDING NOW" />
       <Comments />
       <Footer />
-      {/* Компонент Cart */}
       {shoe && isCartVisible && (
         <Cart
           shoe={{

@@ -98,3 +98,70 @@
     font-size: 12px;
     margin: 15px 0;
 }
+
+.likes {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+@media (max-width: 768px) {
+    .Comments {
+        margin: 30px 10px
+    }
+
+    .mid-info-left img{
+        width: 90vw;
+    }
+    .mid-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .mid-info div p {
+        font-size: 16px;
+    }
+    .mid-info-center {
+        margin: 20px 0
+    }
+
+    .comment h1 {
+        font-size: 24px;
+    }
+    .comment p{
+        font-size: 16px;
+    }
+    p .helpful-review, .comment p span {
+        font-size: 13px;
+    }
+
+    .stars img {
+        width: 17px;
+        height: 17px;
+        margin-right: 3px
+    }
+
+    .upper-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .upper-info div {
+        margin: 10px 0
+    }
+
+    .reviews {
+        display: flex;
+        justify-content: space-between;
+    }
+    .reviews p{
+        color: rgb(80, 80, 80)
+    }
+    .reviews p a {
+        color: black;
+    }
+    .upper-info-right {
+        display: flex;
+    }
+    .upper-info-right h3 {
+        margin-right: 10px
+    }
+}

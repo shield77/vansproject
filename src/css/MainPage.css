@@ -73,6 +73,10 @@ img.banner-mobile {
     display: none;
 }
 
+h1{
+    font-weight: 500;
+  }
+
 @media (max-width: 768px){
     *{
         margin: 0;
